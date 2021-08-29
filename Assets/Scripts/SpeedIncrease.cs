@@ -2,17 +2,17 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SpeedIncrease : MonoBehaviour
+public class SpeedIncrease : CollectibleBase
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    [SerializeField] float _speedAmount = 5;
 
-    // Update is called once per frame
-    void Update()
+    protected override void Collect(Player player)
     {
-        
+        //pull motor controller from player
+        TankController controller = player.GetComponent<TankController>();
+        if(controller != null)
+        {
+            controller.MoveSpeed += _speedAmount;
+        }
     }
 }

@@ -2,17 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class HealthIncrease : MonoBehaviour
+public class HealthIncrease : CollectibleBase
 {
-    // Start is called before the first frame update
-    void Start()
+    [SerializeField] int _healthAdded = 1;
+
+    protected override void Collect(Player player)
     {
-        
+        player.IncreaseHealth(_healthAdded);
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }

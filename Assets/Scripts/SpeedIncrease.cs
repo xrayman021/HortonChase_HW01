@@ -15,4 +15,10 @@ public class SpeedIncrease : CollectibleBase
             controller.MoveSpeed += _speedAmount;
         }
     }
+
+    protected override void Movement(Rigidbody rb)
+    {
+        //calculate rotation
+        Quaternion turnOffset = Quaternion.Euler(MovementSpeed, MovementSpeed, MovementSpeed);
+    }
 }

@@ -7,6 +7,14 @@ public class TankController : MonoBehaviour
     [SerializeField] float _moveSpeed = .25f;
     [SerializeField] float _turnSpeed = 2f;
 
+    [SerializeField] float _maxSpeed = 10f;
+    public float MaxSpeed
+    {
+        get => _maxSpeed;
+        get => _maxSpeed = value;
+
+    }
+
     Rigidbody _rb = null;
 
     private void Awake()

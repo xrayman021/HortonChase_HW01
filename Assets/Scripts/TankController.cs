@@ -11,7 +11,7 @@ public class TankController : MonoBehaviour
     public float MaxSpeed
     {
         get => _maxSpeed;
-        get => _maxSpeed = value;
+        set => _maxSpeed = value;
 
     }
 

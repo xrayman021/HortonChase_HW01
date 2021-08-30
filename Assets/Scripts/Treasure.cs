@@ -2,17 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Treasure : MonoBehaviour
+public class Treasure : CollectibleBase
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    [SerializeField] int _treasureAmount = 0;
 
-    // Update is called once per frame
-    void Update()
+    protected override void Collect(Player player)
     {
-        
+        player.IncreaseTreasure(_treasureAmount);
     }
 }

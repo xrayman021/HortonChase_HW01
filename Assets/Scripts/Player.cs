@@ -7,6 +7,7 @@ public class Player : MonoBehaviour
 {
     [SerializeField] int _maxHealth = 3;
     int _currentHealth;
+    int _treasureAmount;
 
     TankController _tankController;
 
@@ -41,5 +42,11 @@ public class Player : MonoBehaviour
         gameObject.SetActive(false);
         //Play particles
         //Play sounds
+    }
+
+    public void IncreaseTreasure(int amount)
+    {
+        _treasureAmount++;
+        Debug.Log("Player's treasure: " + _treasureAmount);
     }
 }

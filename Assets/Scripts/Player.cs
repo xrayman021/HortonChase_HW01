@@ -1,11 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 [RequireComponent(typeof(TankController))]
 public class Player : MonoBehaviour
 {
     [SerializeField] int _maxHealth = 3;
+    [SerializeField] Text _currentTreasureAmount; 
     int _currentHealth;
     int _treasureAmount;
 
@@ -44,9 +46,10 @@ public class Player : MonoBehaviour
         //Play sounds
     }
 
-    public void IncreaseTreasure(int amount)
+    public void IncreaseTreasure(int treasureIncrease)
     {
-        _treasureAmount++;
+        _treasureAmount += treasureIncrease;
+        _currentTreasureAmount.text = "Treasure: " + _treasureAmount.ToString();
         Debug.Log("Player's treasure: " + _treasureAmount);
     }
 }

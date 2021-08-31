@@ -55,7 +55,7 @@ public class PowerupInvincibility : MonoBehaviour
     {
         if (playerShip != null)
         {
-            playerShip.SetHealth(_healthIncreaseAmount);
+            //playerShip.SetHealth(_healthIncreaseAmount);
 
             //playerShip.SetInvcBoosters(true);
         }
@@ -65,7 +65,7 @@ public class PowerupInvincibility : MonoBehaviour
     {
 
 
-        playerShip?.SetHealth(-_healthIncreaseAmount);
+        //playerShip?.SetHealth(-_healthIncreaseAmount);
 
         //playerShip?.SetInvcBoosters(false);
 

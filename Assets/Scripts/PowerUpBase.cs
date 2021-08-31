@@ -55,4 +55,6 @@ public abstract class PowerUpBase : MonoBehaviour
             AudioHelper.PlayClip2D(_collectSound, 1f);
         }
     }
+
+
 }

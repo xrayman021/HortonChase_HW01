@@ -51,23 +51,23 @@ public class PowerupInvincibility : MonoBehaviour
 
     }
 
-    void ActivatePowerup(PlayerShip playerShip)
+    void ActivatePowerup(Player playerShip)
     {
         if (playerShip != null)
         {
             playerShip.SetHealth(_healthIncreaseAmount);
 
-            playerShip.SetInvcBoosters(true);
+            //playerShip.SetInvcBoosters(true);
         }
     }
 
-    void DeactivatePowerup(PlayerShip playerShip)
+    void DeactivatePowerup(Player playerShip)
     {
 
 
         playerShip?.SetHealth(-_healthIncreaseAmount);
 
-        playerShip?.SetInvcBoosters(false);
+        //playerShip?.SetInvcBoosters(false);
 
     }
 

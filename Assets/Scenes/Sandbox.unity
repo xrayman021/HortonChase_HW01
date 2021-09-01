@@ -202,7 +202,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ff3a9946140be244fb52378f0b2859bd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _healthIncreaseAmount: 1
+  _healthIncreaseAmount: 1000
   _powerupDuration: 5
   _invincibleColor: {fileID: 2100000, guid: 2858231f24c34274883bcc3c07c38e3a, type: 2}
   _invcSound: {fileID: 8300000, guid: 53a48639662556d458489a9d0220c45b, type: 3}
@@ -5442,7 +5442,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 509303ee69e48a841ac32daa0fd2a2fe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _moveSpeed: 0.15
+  _moveSpeed: 0.05
   _turnSpeed: 2
   _maxSpeed: 0.5
 --- !u!114 &732590197
@@ -5955,7 +5955,8 @@ MonoBehaviour:
   _damageAmount: 0
   _impactParticles: {fileID: 594671796}
   _impactSound: {fileID: 8300000, guid: 2c8c296a19d22464c939dcdd82c07d28, type: 3}
-  _speedAmount: 5
+  _speedAmount: 0.3
+  isSlow: 0
 --- !u!54 &1031991021
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -6427,7 +6428,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1510979297}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 4.35, y: 0.66, z: 8.36}
+  m_LocalPosition: {x: 8.44, y: 0.66, z: -5.13}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}

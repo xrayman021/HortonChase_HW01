@@ -4,15 +4,18 @@ using UnityEngine;
 
 public class Slower : Enemy
 {
-    [SerializeField] float _speedAmount = 5;
+    [SerializeField] float _speedAmount = 3;
+    public bool isSlow = false;
     protected override void PlayerImpact(Player player)
     {
-        bool isSlow = false;
         //pull motor controller from player
         TankController controller = player.GetComponent<TankController>();
-        if (controller != null)
+        if (controller != null && isSlow == false)
         {
             controller.MaxSpeed -= _speedAmount;
+            isSlow = true;
         }
     }
+
+    
 }

@@ -10,6 +10,7 @@ public class Player : MonoBehaviour
     [SerializeField] Text _currentTreasureAmount; 
     int _currentHealth;
     int _treasureAmount;
+    int SetHealth;
 
     TankController _tankController;
 
@@ -52,4 +53,6 @@ public class Player : MonoBehaviour
         _currentTreasureAmount.text = "Treasure: " + _treasureAmount.ToString();
         Debug.Log("Player's treasure: " + _treasureAmount);
     }
+
+    
 }

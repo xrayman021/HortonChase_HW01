@@ -2,14 +2,15 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PowerupInvincibility : MonoBehaviour
+public class Invincibility : MonoBehaviour
 {
     [Header("Powerup Settings")]
     [SerializeField] float _healthIncreaseAmount = 1;
     [SerializeField] float _powerupDuration = 5;
+    [SerializeField] Material _invincibleColor;
 
     [Header("Setup")]
-    [SerializeField] GameObject _visualsToDeactivate = null;
+    //[SerializeField] GameObject _visualsToDeactivate = null;
     [SerializeField] AudioClip _invcSound = null;
 
     Collider _colliderToDeactivate = null;
@@ -32,6 +33,7 @@ public class PowerupInvincibility : MonoBehaviour
             StartCoroutine(PowerupSequence(playerShip));
             AudioHelper.PlayClip2D(_invcSound, 1);
         }
+        Debug.Log("Player has entered");
     }
 
     IEnumerator PowerupSequence(Player playerShip)
@@ -55,7 +57,8 @@ public class PowerupInvincibility : MonoBehaviour
     {
         if (playerShip != null)
         {
-            //playerShip.SetHealth(_healthIncreaseAmount);
+            playerShip.IncreaseHealth(+1000);
+            gameObject.SetActive(false);
 
             //playerShip.SetInvcBoosters(true);
         }
@@ -65,7 +68,8 @@ public class PowerupInvincibility : MonoBehaviour
     {
 
 
-        //playerShip?.SetHealth(-_healthIncreaseAmount);
+        playerShip.DecreaseHealth(-1000);
+        gameObject.SetActive(false);
 
         //playerShip?.SetInvcBoosters(false);
 
@@ -75,24 +79,14 @@ public class PowerupInvincibility : MonoBehaviour
     {
         _colliderToDeactivate.enabled = false;
 
-        _visualsToDeactivate.SetActive(false);
+        //_visualsToDeactivate.SetActive(false);
     }
 
     public void EnableObject()
     {
         _colliderToDeactivate.enabled = true;
 
-        _visualsToDeactivate.SetActive(true);
+        //_visualsToDeactivate.SetActive(true);
     }
-    // Start is called before the first frame update
-    void Start()
-    {
-
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-
-    }
+    
 }

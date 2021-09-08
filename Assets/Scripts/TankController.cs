@@ -36,10 +36,10 @@ public class TankController : MonoBehaviour
         Vector3 moveOffset = transform.forward * moveAmountThisFrame;
         // apply vector to the rigidbody
         _rb.MovePosition(_rb.position + moveOffset);
-        if(_moveSpeed < _maxSpeed)
+       /* if(_moveSpeed < _maxSpeed) //"Gradually" increase speed
         {
             _moveSpeed++;
-        }
+        } */
         // technically adjusting vector is more accurate! (but more complex)
     }
 
